@@ -4,6 +4,7 @@ import MissionSection from "../components/MissionSection";
 import TeamSection from "../components/TeamSection";
 import ConsultingCta from "../components/ConsultingCta";
 import MapSection from "../components/MapSection";
+import { Parallax } from "react-scroll-parallax";
 
 const Home = () => {
     // Define the slides specifically for the homepage hero
@@ -35,18 +36,22 @@ const Home = () => {
         <div>
             {/* Pass the defined slides array as a prop */}
             <HeroSlider slides={homeSlides} />
-            <MissionSection />
-            <TeamSection />
+            <Parallax speed={5}><MissionSection /></Parallax>
+            <Parallax speed={5}><TeamSection /></Parallax>
 
             <div className="bg-gray-50">
-              <div className="container mx-auto px-4 py-16">
-                  <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Featured Properties</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {properties.map((property) => (
-                          <PropertyCard key={property.id} property={property} />
-                      ))}
-                  </div>
-              </div>
+              <Parallax speed={5}>
+                <div className="container mx-auto px-4 py-16">
+                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Featured Properties</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {properties.map((property) => (
+                          <Parallax key={property.id} y={[-10, 10]} tagOuter="figure">
+                            <PropertyCard key={property.id} property={property} />
+                          </Parallax>
+                        ))}
+                    </div>
+                </div>
+              </Parallax>
             </div>
 
             <ConsultingCta />

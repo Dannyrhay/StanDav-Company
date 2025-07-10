@@ -10,7 +10,8 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
 
-    const hasFullScreenHero = location.pathname === "/" || location.pathname === "/about";
+    const heroPaths = ["/", "/about", "/services", "/listings", "/contact"];
+    const hasFullScreenHero = heroPaths.includes(location.pathname);
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -36,7 +37,7 @@ const Navbar = () => {
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
-        { name: 'Properties', path: '/Listings' },
+        { name: 'Properties', path: '/listings' },
         { name: 'Contact', path: '/contact' },
     ];
 
