@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import {
   createBrowserRouter,
+  createRoutesFromElements,
+  Route,
   RouterProvider,
-} from 'react-router-dom';
+} from "react-router-dom";
 // Layout
 import RootLayout from './layout/RootLayout';
 
@@ -15,20 +17,17 @@ import Contact from './pages/Contact';
 import SplashPage from './components/SplashPage';
 
 // Create the router outside of the component
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <RootLayout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'about', element: <About /> },
-      { path: 'properties', element: <Listings /> },
-      { path: 'services', element: <Services /> },
-      { path: 'contact', element: <Contact /> },
-      { path: 'add-listing', element: <Contact /> }, // Example route for the button
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="services" element={<Services />} />
+      <Route path="listings" element={<Listings />} /> 
+      <Route path="contact" element={<Contact />} />
+    </Route>
+  )
+);
 
 function App() {
   const [loading, setLoading] = useState(true);
