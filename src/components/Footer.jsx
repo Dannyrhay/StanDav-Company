@@ -38,7 +38,7 @@ const Footer = () => {
             {/* Column 1: About */}
             <div className="space-y-4">
                <Link to="/">
-                <img src={companyLogo} alt="StanDav Group Logo" className="h-16 w-auto bg-white p-2 rounded-md" />
+                <img src={companyLogo} alt="StanDav Group Logo" className="h-16 w-auto" />
               </Link>
               <p className="text-sm">The world's first and largest digital market for crypto collectibles and non-fungible (NFTs). Buy, sell, and discover exclusive digital items.</p>
               <div className="space-y-2 text-sm">
@@ -55,8 +55,7 @@ const Footer = () => {
                 <li><FooterLink to="/about">About Us</FooterLink></li>
                 <li><FooterLink to="/services">Services Details</FooterLink></li>
                 <li><FooterLink to="/contact">Contact</FooterLink></li>
-                <li><FooterLink to="/add-listing">Add Listing</FooterLink></li>
-                <li><FooterLink to="/properties">Property</FooterLink></li>
+                <li><FooterLink to='/Listings'>Property</FooterLink></li>
               </ul>
             </div>
 
@@ -64,7 +63,7 @@ const Footer = () => {
              <div>
               <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
               <ul className="space-y-3 text-sm">
-                <li><FooterLink to="/services/sale">Property on sale</FooterLink></li>
+                <li><FooterLink to="/Listings">Property on sale</FooterLink></li>
                 <li><FooterLink to="/about#team">Team member</FooterLink></li>
                 <li><FooterLink to="/services/buy">Offices for Buy</FooterLink></li>
                 <li><FooterLink to="/terms">Terms of use</FooterLink></li>

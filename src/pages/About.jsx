@@ -104,7 +104,7 @@ const About = () => {
       </section>
 
       {/* --- NEW: Redesigned and Interactive "Core Values" Section --- */}
-      <section className=" bg-amber-400 text-white py-16 sm:py-24">
+      <section className=" bg-gray-500 text-white py-16 sm:py-24">
         <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-1 text-left">

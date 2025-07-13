@@ -37,7 +37,7 @@ const HeroSlider = ({ slides }) => {
               }}
             />
           </Parallax>
-          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
             <Parallax speed={10}>
                 <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in-down">
