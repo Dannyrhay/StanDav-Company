@@ -3,7 +3,7 @@ import React from 'react';
 // --- 1. Import your local images from the assets folder ---
 import teamMember1 from '../assets/images/Slider1.jpg';
 import teamMember2 from '../assets/images/Slider1.jpg';
-import teamMember3 from '../assets/images/Slider2.jpg';
+import teamMember3 from '../assets/images/slider2.jpg';
 
 
 // A reusable component for each team member card
