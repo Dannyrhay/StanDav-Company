@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { animateScroll as scroll } from 'react-scroll';
-import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaPinterest, FaArrowUp, FaCcVisa, FaCcMastercard, FaCcPaypal, FaCcStripe } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaPinterest, FaArrowUp } from 'react-icons/fa';
 import companyLogo from '../assets/logo.jpg';
 
 const FooterLink = ({ to, children }) => (
@@ -32,7 +32,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-blue-950 text-gray-300 pt-16 pb-8">
+      <footer className="bg-slate-900 text-gray-300 pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Column 1: About */}
@@ -96,12 +96,6 @@ const Footer = () => {
 
           <div className="mt-12 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
             <p>&copy; {new Date().getFullYear()} StanDav Group. All Rights Reserved.</p>
-            <div className="flex items-center space-x-4 my-4 md:my-0">
-              <FaCcVisa size={28} />
-              <FaCcMastercard size={28} />
-              <FaCcPaypal size={28} />
-              <FaCcStripe size={28} />
-            </div>
             <div className="flex space-x-4">
               <FooterLink to="/terms">Terms of Use</FooterLink>
               <FooterLink to="/privacy">Privacy Policy</FooterLink>

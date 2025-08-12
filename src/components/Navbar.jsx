@@ -86,7 +86,7 @@ const Navbar = () => {
             <nav className="container mx-auto flex justify-between items-center">
                 {/* Left Column: Takes up available space */}
                 <div className="flex-1">
-                    <NavLink to="/" className={`text-2xl font-bold ${navTextColor}`}>
+                    <NavLink to="/" className={`text-2xl font-bold text-slate-900 ${navTextColor}`}>
                         StanDav
                     </NavLink>
                 </div>
