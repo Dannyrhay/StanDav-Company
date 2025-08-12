@@ -83,29 +83,36 @@ const Navbar = () => {
 
     return (
         <header className={headerClasses}>
-            <nav className="container mx-auto flex justify-center justify-evenly items-center">
-                <NavLink to="/" className={`text-2xl font-bold ${navTextColor}`}>
-                    StanDav
-                </NavLink>
+            <nav className="container mx-auto flex justify-between items-center">
+                {/* Left Column: Takes up available space */}
+                <div className="flex-1">
+                    <NavLink to="/" className={`text-2xl font-bold ${navTextColor}`}>
+                        StanDav
+                    </NavLink>
+                </div>
 
-                <div className={`hidden md:flex space-x-8 items-center ${navTextColor}`}>
+                {/* Center Column: Contains the navigation links */}
+                <div className={`hidden md:flex flex-none justify-center space-x-8 items-center ${navTextColor}`}>
                     {navLinks}
                 </div>
 
-                <div className="md:hidden">
-                    <button onClick={toggleMenu} className={`text-2xl ${navTextColor}`}>
-                        {showMenu ? <CloseIcon /> : <MenuIcon />}
-                    </button>
+                {/* Right Column: Takes up available space and pushes content to the end */}
+                <div className="flex-1 flex justify-end">
+                    <div className="md:hidden">
+                        <button onClick={toggleMenu} className={`text-2xl ${navTextColor}`}>
+                            {showMenu ? <CloseIcon /> : <MenuIcon />}
+                        </button>
+                    </div>
                 </div>
             </nav>
 
-            {showMenu && (
-                <div className="md:hidden mt-4">
-                    <div className={`flex flex-col items-center space-y-4 rounded-lg p-4 text-center ${hasFullScreenHero && !isScrolled ? 'bg-black bg-opacity-80 text-white' : 'bg-white text-neutral-800'}`}>
-                        {navLinks}
-                    </div>
+            {/* MODIFICATION START: Mobile menu container with slide-down animation */}
+            <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${showMenu ? 'max-h-screen opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className={`flex flex-col items-center space-y-4 rounded-lg p-4 text-center ${hasFullScreenHero && !isScrolled ? 'bg-black bg-opacity-80 text-white' : 'bg-white text-neutral-800'}`}>
+                    {navLinks}
                 </div>
-            )}
+            </div>
+            {/* MODIFICATION END */}
         </header>
     );
 };

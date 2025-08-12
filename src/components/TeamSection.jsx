@@ -36,18 +36,18 @@ const TeamSection = () => {
   // --- 2. Use the imported images in your data array ---
   const teamMembers = [
     {
-      name: "Cwesi Oteng Desmond",
+      name: "Kevin Asante",
       title: "CEO of CodiGroup",
       image: teamMember1, // Use the imported variable
     },
     {
-      name: "Micheal Bowe",
+      name: "Stanley",
       title: "Chief Architect",
       image: teamMember2, // Use the imported variable
     },
     {
-      name: "Employees of the Year 2024",
-      title: "James and Anna",
+      name: "Daniel & Eli",
+      title: "Employees of the Year 2024",
       image: teamMember3, // Use the imported variable
     },
   ];
